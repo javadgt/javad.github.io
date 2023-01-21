@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-
+    <div class="circle_1"></div>
+    <div class="circle_2"></div>
     <section>
         <h1>سلام خانوم مهندس خواستم به یه روش هیجان انگیز تر تشکر کنم</h1>
 
@@ -34,7 +35,7 @@
             banner.innerHTML += '<div class="blocks"></div>'
             const duration = Math.random() * 4
             blocks[i].style.animationDuration = duration+'s'
-            blocks[i].style.animationDelay = duration+'s'
+            blocks[i].style.animationDelay = duration + 4 +'s'
             const pos = `${-x * 5}vw ${-y * 5}vh`;
             blocks[i].style.backgroundPosition = pos;
         }
