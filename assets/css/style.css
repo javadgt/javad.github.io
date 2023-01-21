@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "BYekan";
+    src: url(../fonts/BYekan-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+.rtl{
+    direction: rtl;
+}
+
+body{
+    background-color:  #0e3142;
+    font-family: BYekan;
+    overflow: hidden;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    display: grid;
+    place-items: center;
+}
+
+section h1 {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin: 0 auto;
+    /* width: 80%; */
+    /* height: 100vh; */
+    place-items: center;
+    color: whitesmoke;color: blanchedalmond;
+    font-weight: 700;
+    font-size: 3vw;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+section .banner{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    flex-wrap: wrap;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    background-size: 100vw 100vh;
+
+}
+
+.banner .blocks {
+    position: relative;
+    /* border:none !important; */
+    animation: animate 2s ease-in-out forwards ;
+    animation-delay: 1s;
+    transform:  translateZ(2000px);
+    background: url(../img/g.jpg);
+    /* border: 1px solid rgba(128, 128, 128, 0.132); */
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+
+}
+
+
+/* @keyframes animate {
+    0%{
+        transform:  translateZ(2000px);
+
+    }
+
+    100%{
+        transform:  translateZ(0px);
+
+    }
+    
+} */
+
+span{
+    transition: 1s;
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(170px)
+    rotate(-200deg);
+}
+.newSpan{
+    opacity: 1;
+    transform: translateY(0px)
+    rotate(0deg);
+    margin-left: .8rem;
+}
+
+
+
+/* 
+body{  
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: aliceblue;
+}
+
+#slice img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    display: none;
+}
+
+#slice div {
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url(../img/girl.jpg);
+    transform: rotateY(-50deg) scale(0.5);
+    transform-origin: bottom;
+    animation: animate 1s  forwards ;
+    opacity: 0;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(-50deg) scale(0.5);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+} */
+
+/* #slice.active div{
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+    transition-delay: .5s;
+} */

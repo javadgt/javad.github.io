@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <section>
+        <h1>سلام خانوم مهندس خواستم به یه روش هیجان انگیز تر تشکر کنم</h1>
+
+        <div class="banner">
+           <div class="blocks"></div>
+        </div>
+
+        <!-- <div id="slice" >
+            <img  src="./assets/img/girl.jpg" alt="">
+        </div> -->
+
+        
+    </section>
+    
+
+    <script>
+        const banner = document.querySelector('.banner')
+        const blocks = document.getElementsByClassName('blocks')
+
+        for ( let i = 1, x = 1, y = 0;
+              i < 400;
+              ++i && (x === 19 ? (x = 0) || y++ : x++)) {
+
+            banner.innerHTML += '<div class="blocks"></div>'
+            const duration = Math.random() * 4
+            blocks[i].style.animationDuration = duration+'s'
+            blocks[i].style.animationDelay = duration+'s'
+            const pos = `${-x * 5}vw ${-y * 5}vh`;
+            blocks[i].style.backgroundPosition = pos;
+        }
+
+        let time = document.getElementById('time')
+        let date = document.getElementById('date')
+
+        let ani = document.querySelector('h1')
+        let item = ani.textContent.split(' ')
+        ani.textContent = ''
+        for (let el of item ) {
+            ani.innerHTML += '<span>'+ el +' </span>'
+        }
+
+        let timeEnd = setInterval(fade,200)
+        let cahr = 0
+        function fade() {
+            let span = ani.querySelectorAll('span')[cahr]
+            span.classList.add('newSpan')
+            cahr++;
+            if (cahr == item.length) {
+                clearInterval(timeEnd)
+            }
+        }
+
+
+        // for (let x = 1; x <= 10; x++) {
+            
+        //     for (let y = 1; y <= 10; y++) {
+
+        //         banner.innerHTML += '<div class="blocks"></div>'
+        //         const duration = Math.random() * 1
+        //         blocks[x * y].style.animationDuration = duration+'s'
+        //         blocks[x * y].style.animationDelay = duration+'s'
+        //         const pos = `${-x * 10}vw ${-y * 10}vh`;
+        //         blocks[x * y].style.backgroundPosition = pos;
+                
+        //     }
+            
+        // }
+
+    </script>
+
+
+    <!-- <script src="./assets/js/app.js"></script> -->
+</body>
+</html>
