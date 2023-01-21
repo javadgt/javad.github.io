@@ -76,12 +76,11 @@ section .banner{
 
 .banner .blocks {
     position: relative;
-    /* border:none !important; */
     animation: animate 2s ease-in-out forwards ;
     animation-delay: 1s;
     transform:  translateZ(2000px);
     background: url(../img/g.jpg);
-    border: 1px solid rgba(128, 128, 128, 0.132);
+    border: 1px solid red;
     background-size: 100vw 100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
