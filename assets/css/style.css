@@ -80,7 +80,7 @@ section .banner{
     animation-delay: 1s;
     transform:  translateZ(2000px);
     background: url(../img/g.jpg);
-    border: 1px solid red;
+    border: 1px solid #ffffff29;
     background-size: 100vw 100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
